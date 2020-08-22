@@ -14,10 +14,13 @@ function fix1598096194_mapa1($atts, $content = null){
 	<style type="text/css" media="screen">
 		#mapid { height: 180px; }
 	</style>
-	<div id="mapid"></div>
+	<div id="mapid">xxx</div>
 
 	<script type="text/javascript">
-		var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+		jQuery(function($){
+			var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+		});
+		
 	</script>
 
 	<?php
