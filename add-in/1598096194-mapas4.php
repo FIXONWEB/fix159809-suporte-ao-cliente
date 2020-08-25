@@ -1,5 +1,4 @@
 <?php
-//1598096194
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 add_shortcode("fix1598096194_mapa4", "fix1598096194_mapa4");
@@ -18,18 +17,12 @@ function fix1598096194_mapa4($atts, $content = null){
 			border: 1px solid gray;
 		}
 	</style>
-	<div id="map4id">xxx</div>
+	<div id="map4id">carregando mapa...</div>
 
 	<script type="text/javascript">
 		jQuery(function($){
 			
 		});
-
-		//var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-		// var map = L.map('map4id').fitWorld();
-
-		
-
 
 		var map = L.map('map4id').fitWorld();
 		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -43,9 +36,6 @@ function fix1598096194_mapa4($atts, $content = null){
 
 		map.locate({setView: true, maxZoom: 16});
 
-
-
-
 		var greenIcon = L.icon({
 		    iconUrl: 'http://u1598090346.pro.fixonweb.com.br/wp-content/uploads/2020/08/leaf-green.png',
 		    shadowUrl: 'http://u1598090346.pro.fixonweb.com.br/wp-content/uploads/2020/08/leaf-shadow.png',
@@ -57,8 +47,6 @@ function fix1598096194_mapa4($atts, $content = null){
 		    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 		});
 		L.marker([-8.277521, -36.006093], {icon: greenIcon}).addTo(map);
-//-8.28512, -35.997656
-//-8.277521, -36.006093 //eu
 
 		var popup = L.popup();
 		function onMapClick(e) {
